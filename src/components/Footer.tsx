@@ -136,7 +136,7 @@ const Footer = () => {
                                     asChild
                                 >
                                     <a
-                                        href="https://www.kaggle.com/siddhrajthakor"
+                                        href="https://kaggle.com/yourusername"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
