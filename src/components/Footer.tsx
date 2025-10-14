@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail, Heart, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Twitter, Instagram, BarChart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -47,18 +47,6 @@ const Footer = () => {
                                     className="block text-sm text-[hsl(var(--footer-muted))] hover:text-[hsl(var(--footer-fg))] transition-colors"
                                 >
                                     Projects
-                                </a>
-                                <a
-                                    href="#blog"
-                                    className="block text-sm text-[hsl(var(--footer-muted))] hover:text-[hsl(var(--footer-fg))] transition-colors"
-                                >
-                                    Blog
-                                </a>
-                                <a
-                                    href="#resume"
-                                    className="block text-sm text-[hsl(var(--footer-muted))] hover:text-[hsl(var(--footer-fg))] transition-colors"
-                                >
-                                    Resume
                                 </a>
                                 <a
                                     href="#contact"
@@ -120,7 +108,7 @@ const Footer = () => {
                                     asChild
                                 >
                                     <a
-                                        href="https://twitter.com/yourusername"
+                                        href="https://x.com/SiddhrajTh94671"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -134,7 +122,7 @@ const Footer = () => {
                                     asChild
                                 >
                                     <a
-                                        href="https://instagram.com/yourusername"
+                                        href="https://instagram.com/siddhraj_1470"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -148,21 +136,11 @@ const Footer = () => {
                                     asChild
                                 >
                                     <a
-                                        href="https://kaggle.com/yourusername"
+                                        href="https://www.kaggle.com/siddhrajthakor"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <svg
-                                            className="h-4 w-4"
-                                            viewBox="0 0 24 24"
-                                            aria-hidden="true"
-                                        >
-                                            <rect width="24" height="24" rx="6" fill="currentColor" className="text-[hsl(var(--footer-muted))]" />
-                                            <path
-                                                d="M8.5 7h2v4.8l4.2-4.8H18l-4.6 5.5L18.3 17h-3.2l-4.6-6v6H8.5V7z"
-                                                fill="#20BEFF"
-                                            />
-                                        </svg>
+                                        <BarChart className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
                             </div>
