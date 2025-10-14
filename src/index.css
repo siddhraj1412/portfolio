@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Refined Professional Theme */
+    --background: 220 33% 98%;             /* Subtle Blue-tinted White */
+    --foreground: 224 71% 4%;              /* Rich Dark Blue */
+
+    --card: 0 0% 100%;                     /* Pure White */
+    --card-foreground: 224 71% 4%;
+
+    /* Updated Nav and Footer to share same color values */
+    --nav-bg: 222 47% 31%;                 /* Deep Navy Blue */
+    --nav-fg: 0 0% 100%;                   /* White text */
+    
+    /* Footer Text Colors */
+    --footer-bg: 222 47% 31%;              /* Deep Navy Blue */
+    --footer-fg: 0 0% 100%;                /* White Text */
+    --footer-heading: 221 83% 53%;         /* Bright Blue for Headings */
+    --footer-muted: 210 40% 95%;           /* Light Gray for Footer Links */
+
+    --primary: 222 47% 31%;                /* Deep Navy */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 221 83% 53%;              /* Bright Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 221 83% 53%;                 /* Changed from Pink to Blue */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 31%;
+
+    /* Refined Shadows */
+    --shadow-sm: 0 2px 8px rgba(71, 84, 103, 0.05);
+    --shadow-md: 0 4px 12px rgba(71, 84, 103, 0.08);
+    --shadow-lg: 0 8px 28px rgba(71, 84, 103, 0.12);
+  }
+
+  /* Dark Mode - Modern Tech Theme */
+  .dark {
+    --background: 222 47% 11%;             /* Dark Blue-Gray */
+    --foreground: 210 40% 98%;             /* Clean White */
+
+    --nav-bg: 222 47% 8%;                  /* Dark Nav Background */
+    --nav-fg: 210 40% 98%;                 /* Light Nav Text */
+    
+    --footer-bg: 142 71% 45%;              /* Green Footer */
+    --footer-fg: 0 0% 100%;                /* White text instead of dark */
+    --footer-muted: 0 0% 85%;              /* Light gray for better visibility */
+
+    /* Quick Links and other text elements */
+    --footer-link: 0 0% 100%;              /* White text for links */
+    --footer-link-hover: 0 0% 90%;         /* Slightly dimmed on hover */
+
+    --card: 222 47% 8%;                    /* Darker Blue-Gray */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 71% 45%;                /* Energetic Green */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;              /* Deep Blue-Gray */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 142 71% 45%;                 /* Energetic Green */
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 142 71% 45%;
+
+    --footer-bg: 222 47% 6%;               /* Even Darker Background for Footer */
+    --footer-fg: 142 71% 45%;              /* Green Text Maintained */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  /* Improved Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Smooth Scrolling for Anchor Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Better Focus States */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/50 rounded-full hover:bg-primary/70;
+  }
+}
+
+@layer components {
+  /* Hero Name Styling (No Shadow) */
+  .hero-name {
+    @apply text-foreground font-bold;
+  }
+
+  /* Navbar Styling */
+  .navbar {
+    @apply bg-[hsl(var(--nav-bg))] 
+           text-[hsl(var(--nav-fg))] 
+           fixed 
+           top-0 
+           w-full 
+           z-50
+           transition-colors 
+           duration-300;
+  }
+
+  /* Enhanced Footer with More Distinction */
+  .footer {
+    @apply bg-[hsl(var(--footer-bg))] 
+           text-[hsl(var(--footer-fg))] 
+           py-8                            /* Added padding */
+           mt-auto                         /* Push footer to bottom */
+           transition-colors 
+           duration-300;
+  }
+  
+  /* Footer Content Styling */
+  .footer-content {
+    @apply max-w-7xl 
+           mx-auto 
+           px-4 
+           sm:px-6 
+           lg:px-8;
+  }
+
+  /* Footer Heading Styles */
+  .footer h3 {
+    @apply text-[hsl(var(--footer-heading))] 
+           font-bold 
+           text-lg 
+           mb-4;
+  }
+
+  /* Enhanced Card Styling */
+  .card {
+    @apply bg-card 
+           text-card-foreground 
+           shadow-md 
+           hover:shadow-lg 
+           transition-all 
+           duration-300;
+  }
+  
+  /* Button Improvements */
+  .button-primary {
+    @apply bg-primary 
+           text-primary-foreground 
+           hover:bg-primary/90 
+           active:scale-[0.98] 
+           transition-all;
+  }
+  
+  /* Accent Elements */
+  .accent-element {
+    @apply bg-accent 
+           text-accent-foreground 
+           shadow-sm 
+           hover:bg-accent/90;
+  }
+
+  .dark .footer a {
+    @apply text-[hsl(var(--footer-link))] hover:text-[hsl(var(--footer-link-hover))] transition-colors;
+  }
+
+  .dark .footer p {
+    @apply text-[hsl(var(--footer-fg))];
+  }
+
+  .dark .footer-social-button {
+    @apply bg-white/20 hover:bg-white/30;
+  }
+
+  .dark .footer-social-button svg {
+    @apply text-white;
+  }
+
+  /* Light-mode specific footer differentiation */
+  :root .footer { /* default / light mode */
+    /* ensure base footer styles remain */
+  }
+
+  /* Name column: prominent (white/strong), descriptive text muted */
+  :root .footer .footer-name h3 {
+    color: hsl(var(--footer-fg)); /* white/foreground for strong name */
+    font-weight: 700;
+  }
+  :root .footer .footer-name p {
+    color: hsl(var(--footer-muted)); /* muted description */
+    opacity: 0.95;
+    line-height: 1.6;
+  }
+
+  /* Quick Links column: heading in accent/heading color, links muted but readable */
+  :root .footer .footer-links h3 {
+    color: hsl(var(--footer-heading)); /* accent heading color */
+    font-weight: 700;
+  }
+  :root .footer .footer-links a {
+    color: hsl(var(--footer-muted));
+    transition: color .18s;
+  }
+  :root .footer .footer-links a:hover,
+  :root .footer .footer-links a:focus {
+    color: hsl(var(--footer-fg));
+  }
+
+  /* Connect column: heading same as quick links, icon buttons clearly visible */
+  :root .footer .footer-connect h3 {
+    color: hsl(var(--footer-heading));
+    font-weight: 700;
+  }
+  :root .footer .footer-connect .button, 
+  :root .footer .footer-connect .footer-social-button,
+  :root .footer .footer-connect .btn { /* common button class hooks */
+    background: rgba(255,255,255,0.06); /* subtle contrast on dark-blue footer */
+    border: 1px solid rgba(255,255,255,0.06);
+    color: hsl(var(--footer-fg));
+  }
+  :root .footer .footer-connect .button svg,
+  :root .footer .footer-connect .footer-social-button svg {
+    color: hsl(var(--footer-fg));
+    opacity: 0.98;
+  }
+
+  /* make bottom copyright text slightly brighter for readability */
+  :root .footer .border-t p,
+  :root .footer .border-t .text-sm {
+    color: hsl(var(--footer-muted));
+    opacity: 0.95;
+  }
+
+  /* Dark-mode overrides remain untouched (keep good contrast) */
+  .dark .footer .footer-name h3,
+  .dark .footer .footer-links h3,
+  .dark .footer .footer-connect h3 {
+    /* use existing dark-mode variables / keep current behavior */
+  }
+}
