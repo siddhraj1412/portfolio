@@ -137,7 +137,7 @@ export default function Contact() {
                 className="w-full justify-start h-16 text-base transition-all group"
               >
                 <a
-                  href="https://instagram.com/yourusername"
+                  href="https://instagram.com/siddhraj_1470"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Instagram"
@@ -161,7 +161,7 @@ export default function Contact() {
                 className="w-full justify-start h-16 text-base transition-all group"
               >
                 <a
-                  href="https://kaggle.com/yourusername"
+                  href="https://www.kaggle.com/siddhrajthakor"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Kaggle"
