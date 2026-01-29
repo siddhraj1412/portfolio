@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, Twitter, Instagram, BarChart } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Instagram, BarChart, Clapperboard } from "lucide-react";
 
 export default function Contact() {
   // Changed: open Gmail compose in new tab, fallback to mailto if popup blocked
@@ -149,6 +149,30 @@ export default function Contact() {
                   <div className="text-left">
                     <div className="font-semibold group-hover:text-white">Instagram</div>
                     <div className="text-sm text-muted-foreground group-hover:text-white dark:group-hover:text-green-100">Check out my posts</div>
+                  </div>
+                </a>
+              </Button>
+
+              {/* Letterboxd */}
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="w-full justify-start h-16 text-base transition-all group"
+              >
+                <a
+                  href="https://letterboxd.com/siddhrajthakor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Letterboxd"
+                  className="flex items-center w-full px-4 py-3 rounded-md
+                             hover:bg-blue-600 hover:border-blue-600 hover:text-white
+                             dark:hover:bg-green-600 transition-colors"
+                >
+                  <Clapperboard className="h-6 w-6 mr-4 group-hover:text-white dark:group-hover:text-white" />
+                  <div className="text-left">
+                    <div className="font-semibold group-hover:text-white">Letterboxd</div>
+                    <div className="text-sm text-muted-foreground group-hover:text-white dark:group-hover:text-green-100">Check out my movie reviews</div>
                   </div>
                 </a>
               </Button>

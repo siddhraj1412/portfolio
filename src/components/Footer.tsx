@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail, Heart, Twitter, Instagram, BarChart } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Instagram, BarChart, Clapperboard } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className="footer-name">
                             <h3 className="font-bold text-lg mb-4">Siddhraj Thakor</h3>
                             <p className="text-[hsl(var(--footer-muted))] text-sm">
-                                I’m passionate about football analytics — digging into match data to uncover insights, scout potential talent, and analyze performances
+                                I’m passionate about football analytics digging into match data to uncover insights, scout potential talent, and analyze performances
                             </p>
                         </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                         <div className="footer-connect">
                             <h3 className="font-bold text-lg mb-4 text-[hsl(var(--footer-fg))]">Connect</h3>
                             <div className="flex gap-2">
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
@@ -74,7 +74,7 @@ const Footer = () => {
                                         <Github className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
@@ -88,7 +88,7 @@ const Footer = () => {
                                         <Linkedin className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
@@ -101,7 +101,7 @@ const Footer = () => {
                                         <Mail className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
@@ -115,7 +115,7 @@ const Footer = () => {
                                         <Twitter className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
@@ -129,14 +129,28 @@ const Footer = () => {
                                         <Instagram className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant="secondary"
                                     size="icon"
                                     className="bg-white/10 hover:bg-white/20 transition-colors"
                                     asChild
                                 >
                                     <a
-                                        href="https://kaggle.com/yourusername"
+                                        href="https://letterboxd.com/siddhrajthakor"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Clapperboard className="h-4 w-4 text-[hsl(var(--footer-fg))]" />
+                                    </a>
+                                </Button>
+                                <Button
+                                    variant="secondary"
+                                    size="icon"
+                                    className="bg-white/10 hover:bg-white/20 transition-colors"
+                                    asChild
+                                >
+                                    <a
+                                        href="https://kaggle.com/siddhrajthakor"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -149,9 +163,7 @@ const Footer = () => {
 
                     <div className="border-t border-[hsl(var(--footer-muted))] pt-8 text-center">
                         <p className="text-sm text-[hsl(var(--footer-muted))] flex items-center justify-center gap-2">
-                            © {currentYear} Siddhraj Thakor. Made with{" "}
-                            <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using
-                            React & TypeScript
+                            © {currentYear} Siddhraj Thakor. Made with React and TypeScript
                         </p>
                     </div>
                 </div>

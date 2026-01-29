@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Eye, Download } from "lucide-react";
 
 const Resume = () => {
-  const resumeUrl = "/resume.pdf";
+  const resumeUrl = "https://drive.google.com/file/d/1iQloTgn2wS3GLCtAATUoiuRSRtmP9et5/preview";
 
   return (
     <section id="resume" className="py-16 bg-background">
@@ -27,7 +27,7 @@ const Resume = () => {
 
             {/* Action Buttons */}
             <div className="flex justify-center gap-4">
-              <Button 
+              <Button
                 onClick={() => window.open(resumeUrl, '_blank')}
                 variant="outline"
                 className="gap-2"
@@ -35,8 +35,8 @@ const Resume = () => {
                 <Eye className="h-4 w-4" />
                 View Full Screen
               </Button>
-              
-              <Button 
+
+              <Button
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = resumeUrl;

@@ -1,5 +1,5 @@
 // src/Hero.js
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Clapperboard } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Hero() {
@@ -90,6 +90,22 @@ export default function Hero() {
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+
+            {/* Letterboxd button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="hover:scale-110 transition-transform"
+            >
+              <a
+                href="https://letterboxd.com/siddhrajthakor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Clapperboard className="h-5 w-5" />
               </a>
             </Button>
 
