@@ -1,4 +1,4 @@
-# Siddhraj's Portfolio
+# Portfolio
 
 A modern, high-performance personal portfolio website built with **React**, **TypeScript**, and **Vite**. This portfolio features a sleek dark-themed design with smooth animations and interactive components.
 
